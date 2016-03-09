@@ -3,6 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+//datoncito/jelastic-campitos  
+//https://github.com/TrejoPerez/trejo-spring
+
 package spring.boot.nomaven;
 
 import javax.persistence.Column;
