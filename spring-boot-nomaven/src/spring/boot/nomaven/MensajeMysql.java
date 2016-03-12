@@ -16,8 +16,8 @@ public class MensajeMysql extends Mensaje implements ComportamientoMensaje{
 
     @Override
     public ArrayList<Mensaje> leerTodosLosMensajes() {
-        DAOMensaje dao=new DAOMensaje
-        
+        //DAOMensaje dao=new DAOMensaje
+        //
     }
     
     
