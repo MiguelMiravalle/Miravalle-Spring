@@ -6,6 +6,8 @@
 package spring.boot.nomaven;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.ArrayList;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +21,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/")
 public class ControladorMensaje {
+    @Autowired ComportamientoMensaje miServicioMensaje;
     
     @CrossOrigin
     @RequestMapping(value="/mensaje", method=RequestMethod.GET, headers = {"Accept=application/json"})
     @ResponseBody String obtenerTodos()throws Exception{
-        DAOMensaje dao=new DAOMensaje();
+       // DAOMensaje dao=new DAOMensaje();
         ObjectMapper maper=new ObjectMapper();
-        return maper.writeValueAsString(dao.buscarTodos());
+       // return maper.writeValueAsString(dao.buscarTodos());
+        ArrayList<Mensaje> mensajes = miServicioMensaje.leerTodosLosMensajes();
+       return maper.writeValueAsString(mensajes);
     }
     
 }
