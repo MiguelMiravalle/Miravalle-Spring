@@ -12,13 +12,17 @@ import java.util.ArrayList;
  *
  * @author T-101
  */
-public class MensajeMysql extends Mensaje implements ComportamientoMensaje{
+//public class MensajeMysql extends Mensaje implements ComportamientoMensaje{
 
-    @Override
+   /* @Override
     public ArrayList<Mensaje> leerTodosLosMensajes() {
         //DAOMensaje dao=new DAOMensaje
         //
-    }
+    }*/
     
-    
-}
+    //@Override
+   // public void guardar(Mensaje m){
+       // session.save(m);
+       // cerrarTodo();
+   // }
+//}

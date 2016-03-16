@@ -21,7 +21,7 @@ public class ConfigurarServicios {
     //faceboock, mysql, mongodb
     @Bean 
     public ComportamientoMensaje miServicioMensaje(){
-        return new MensajeSerializado();
+        return new MensajeMysql();
     }
     
     

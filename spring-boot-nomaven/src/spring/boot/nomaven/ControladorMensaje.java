@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,5 +33,18 @@ public class ControladorMensaje {
         ArrayList<Mensaje> mensajes = miServicioMensaje.leerTodosLosMensajes();
        return maper.writeValueAsString(mensajes);
     }
+    
+     @CrossOrigin
+     @RequestMapping(value="/mensaje/{titulo}/{cuerpo}", method=RequestMethod.POST, headers = {"Accept=text/html"})
+     @ResponseBody String guardarMensaje(@PathVariable String titulo, @PathVariable String cuerpo)throws Exception{
+         Mensaje m=new Mensaje();
+         m.setTitulo(titulo);
+         m.setCuerpo(cuerpo);
+     
+       miServicioMensaje.guardar(m);
+       return "Mensaje guardado con exito";
+         
+     }
+    
     
 }
