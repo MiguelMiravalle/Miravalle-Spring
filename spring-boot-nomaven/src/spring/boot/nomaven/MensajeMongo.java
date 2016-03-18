@@ -6,12 +6,41 @@
 package spring.boot.nomaven;
 
 import java.util.ArrayList;
+import javax.persistence.Id;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author T-101
  */
-public class MensajeMongo extends Mensaje implements ComportamientoMensaje {
+@Repository
+public class MensajeMongo extends Mensaje{
+   
+   
+@Id
+private String idd;
+
+    /**
+     * @return the id
+     */
+    public String getIdd() {
+        return idd;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.idd = id;
+    }
+
+    
+
+   
+
+}
+
+/*public class MensajeMongo extends Mensaje implements ComportamientoMensaje {
 
     @Override
     public ArrayList<Mensaje> leerTodosLosMensajes() {
@@ -32,4 +61,4 @@ public class MensajeMongo extends Mensaje implements ComportamientoMensaje {
     }
     
 }
-
+*/

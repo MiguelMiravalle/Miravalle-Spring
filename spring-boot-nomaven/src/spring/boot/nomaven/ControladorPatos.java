@@ -24,6 +24,13 @@ public class ControladorPatos {
     servicio.hacerCuac();
     //return "Probando patos de todo tipo";
     return servicio.hacerCuac();
+    
+    
+    /*@Autowired ComportamientoCuac servicio;
+    @RequestMapping(value="/pato", method=RequestMethod.GET,headers = {"Accept=text/htm"})
+    @ResponseBody String misPatos(){
+    return servicio.hacerCuac();*/
+    
     }
     
 }

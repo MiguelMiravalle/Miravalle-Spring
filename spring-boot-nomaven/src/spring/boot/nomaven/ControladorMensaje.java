@@ -7,6 +7,7 @@ package spring.boot.nomaven;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.ArrayList;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,22 +28,25 @@ public class ControladorMensaje {
     @CrossOrigin
     @RequestMapping(value="/mensaje", method=RequestMethod.GET, headers = {"Accept=application/json"})
     @ResponseBody String obtenerTodos()throws Exception{
-       // DAOMensaje dao=new DAOMensaje();
-        ObjectMapper maper=new ObjectMapper();
-       // return maper.writeValueAsString(dao.buscarTodos());
-        ArrayList<Mensaje> mensajes = miServicioMensaje.leerTodosLosMensajes();
-       return maper.writeValueAsString(mensajes);
+    ObjectMapper maper=new ObjectMapper();
+    List<Mensaje> mensajitos=   miServicioMensaje.leerTodosLosMensajes();
+    return maper.writeValueAsString(mensajitos);
     }
+    // DAOMensaje dao=new DAOMensaje();
+    // return maper.writeValueAsString(dao.buscarTodos());
+    //ArrayList<Mensaje> mensajes = miServicioMensaje.leerTodosLosMensajes();
+    //return maper.writeValueAsString(mensajes);
+    
     
      @CrossOrigin
      @RequestMapping(value="/mensaje/{titulo}/{cuerpo}", method=RequestMethod.POST, headers = {"Accept=text/html"})
      @ResponseBody String guardarMensaje(@PathVariable String titulo, @PathVariable String cuerpo)throws Exception{
-         Mensaje m=new Mensaje();
-         m.setTitulo(titulo);
-         m.setCuerpo(cuerpo);
+     Mensaje m=new Mensaje();
+     m.setTitulo(titulo);
+     m.setCuerpo(cuerpo);
      
-       miServicioMensaje.guardar(m);
-       return "Mensaje guardado con exito";
+     miServicioMensaje.guardar(m);
+     return "Mensaje guardado con exito";
          
      }
     
