@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
- * @author campitos
+ * @author Miravalle-Spring
  */
 @Controller
 @RequestMapping("/")

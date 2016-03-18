@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author t-101
+ * @author Miravalle-Spring
  */
 @Entity
 @Table(name="MENSAJE")

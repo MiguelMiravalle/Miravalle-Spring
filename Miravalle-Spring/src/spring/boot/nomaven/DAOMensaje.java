@@ -11,6 +11,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+
+/*
+@author Miravalle-Spring
+*/
+
+
 public class DAOMensaje {
     public  SessionFactory sessionFactory;
     public  Session session;

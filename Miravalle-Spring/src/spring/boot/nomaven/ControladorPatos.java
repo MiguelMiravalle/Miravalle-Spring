@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
- * @author T-101
+ * @author Miravalle-Spring
  */
 @Controller
 @RequestMapping("/")

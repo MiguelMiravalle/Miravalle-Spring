@@ -7,7 +7,7 @@ package spring.boot.nomaven;
 
 /**
  *
- * @author T-101
+ * @author Miravalle-Spring
  */
 public class PatoGoma extends Pato implements ComportamientoCuac {
     

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  *
- * @author T-101
+ * @author Miravalle-Spring
  */
 @Configuration
 public class ConfigurarServicios {

@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 /**
  *
- * @author campitos
+ * @author Miravalle-Spring
  */
 @SpringBootApplication
 @EnableAutoConfiguration

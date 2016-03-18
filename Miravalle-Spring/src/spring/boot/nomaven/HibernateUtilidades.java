@@ -10,7 +10,7 @@ import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
  *
- * @author Campitos Ley <campitos-ley.com>
+ * @author Miravalle-Spring
  */
 public class HibernateUtilidades {
   

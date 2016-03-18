@@ -7,7 +7,7 @@ package spring.boot.nomaven;
 
 /**
  *
- * @author T-101
+ * @author Miravalle-Spring
  */
 public class SistemaPatos {public static void main(String[] args) {
     Pato p = new Pato();

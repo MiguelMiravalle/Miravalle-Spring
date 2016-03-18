@@ -15,7 +15,7 @@ import org.hibernate.Transaction;
 
 /**
  *
- * @author T-101
+ * @author Miravalle-Spring
  */
 
 public class MensajeMysql extends Mensaje implements ComportamientoMensaje{

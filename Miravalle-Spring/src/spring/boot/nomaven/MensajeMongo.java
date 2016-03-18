@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author T-101
+ * @author Miravalle-Spring
  */
 
 public class MensajeMongo implements ComportamientoMensaje {

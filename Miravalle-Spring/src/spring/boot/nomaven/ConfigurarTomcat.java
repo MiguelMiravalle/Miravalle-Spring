@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 /**
  *
- * @author campitos
+ * @author Miravalle-Spring
  */
 @Component
 public class ConfigurarTomcat implements EmbeddedServletContainerCustomizer{

@@ -11,7 +11,7 @@ import jdk.internal.org.objectweb.asm.commons.TryCatchBlockSorter;
 
 /**
  *
- * @author T-101
+ * @author Miravalle-Spring
  */
 public interface ComportamientoMensaje {
     

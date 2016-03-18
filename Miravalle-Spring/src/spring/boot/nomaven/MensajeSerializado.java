@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author T-101
+ * @author Miravalle-Spring
  */
 public class MensajeSerializado extends Mensaje implements ComportamientoMensaje {
 
