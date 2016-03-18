@@ -29,14 +29,17 @@ public class ControladorMensaje {
     @RequestMapping(value="/mensaje", method=RequestMethod.GET, headers = {"Accept=application/json"})
     @ResponseBody String obtenerTodos()throws Exception{
     ObjectMapper maper=new ObjectMapper();
-    List<Mensaje> mensajitos=   miServicioMensaje.leerTodosLosMensajes();
-    return maper.writeValueAsString(mensajitos);
+    List<Mensaje> mensaje=   miServicioMensaje.leerTodosLosMensajes();
+    return maper.writeValueAsString(mensaje); 
     }
-    // DAOMensaje dao=new DAOMensaje();
-    // return maper.writeValueAsString(dao.buscarTodos());
-    //ArrayList<Mensaje> mensajes = miServicioMensaje.leerTodosLosMensajes();
-    //return maper.writeValueAsString(mensajes);
     
+    @RequestMapping(value="/mensaje/{id}", method=RequestMethod.GET, headers = {"Accept=application/json"})
+    @ResponseBody String buscarPorId(@PathVariable Integer id)throws Exception{
+    DAOMensaje dao = new DAOMensaje();
+    Mensaje m = dao.buscarPorId(id);
+    ObjectMapper mapper = new ObjectMapper();
+    return mapper.writeValueAsString(m);
+    }
     
      @CrossOrigin
      @RequestMapping(value="/mensaje/{titulo}/{cuerpo}", method=RequestMethod.POST, headers = {"Accept=text/html"})
@@ -49,6 +52,12 @@ public class ControladorMensaje {
      return "Mensaje guardado con exito";
          
      }
+     
+    // DAOMensaje dao=new DAOMensaje();
+    // return maper.writeValueAsString(dao.buscarTodos());
+    //ArrayList<Mensaje> mensajes = miServicioMensaje.leerTodosLosMensajes();
+    //return maper.writeValueAsString(mensajes);
+    
     
     
 }

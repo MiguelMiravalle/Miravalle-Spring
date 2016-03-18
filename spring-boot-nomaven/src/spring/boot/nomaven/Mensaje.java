@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 
-//datoncito/jelastic-campitos  
-//https://github.com/TrejoPerez/trejo-spring
 
 package spring.boot.nomaven;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,11 +17,11 @@ import javax.persistence.Table;
 
 /**
  *
- * @author campitos
+ * @author t-101
  */
 @Entity
 @Table(name="MENSAJE")
-public class Mensaje {
+public class Mensaje implements Serializable {
     @Id
     @GeneratedValue
     @Column(name="id_mensaje ")        
@@ -72,6 +72,10 @@ public class Mensaje {
 
     public void setCuerpo(String cuerpo) {
         this.cuerpo = cuerpo;
+    }
+
+    void add(ArrayList<Mensaje> men) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

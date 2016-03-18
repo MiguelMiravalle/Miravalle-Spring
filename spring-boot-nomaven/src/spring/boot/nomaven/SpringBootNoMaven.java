@@ -21,19 +21,19 @@ public class SpringBootNoMaven {
 
     /**
      * @param args the command line arguments
-     */
+    */
     public static void main(String[] args)throws Exception{
         // TODO code application logic here
         SpringApplication.run(SpringBootNoMaven.class, args);
         try{
-            /*
-            DAOMensaje dao=new DAOMensaje();
-            Mensaje mensa=new Mensaje("Segundo mensaje", "Todos vamos a moriiir!");
-            dao.guardar(mensa);
-          */
-            System.out.println("Mensaje guardado con exito");
+         /*
+         DAOMensaje dao=new DAOMensaje();
+         Mensaje mensa=new Mensaje("Segundo mensaje", "Todos vamos a moriiir!");
+         dao.guardar(mensa);
+         */
+            System.out.println("Mensaje Guardado Exitosamente");
         }catch(Exception e){
-            System.out.println("Algo malo:"+e.getMessage());
+            System.out.println("Algo salio mal: " + e.getMessage());
         }
     }
     

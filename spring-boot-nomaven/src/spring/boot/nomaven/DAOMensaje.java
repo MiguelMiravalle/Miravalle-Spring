@@ -35,7 +35,7 @@ public class DAOMensaje {
     2. BUSCAR TODOS
     */
     ArrayList<Mensaje> buscarTodos() throws Exception{
-  ArrayList<Mensaje>objetos=  (ArrayList<Mensaje>) session.createCriteria(Mensaje.class).list();
+  ArrayList<Mensaje> objetos=  (ArrayList<Mensaje>) session.createCriteria(Mensaje.class).list();
   cerrarTodo();
   
     return objetos;

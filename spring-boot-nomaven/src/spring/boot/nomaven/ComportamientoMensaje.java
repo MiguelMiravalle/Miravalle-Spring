@@ -15,7 +15,7 @@ import jdk.internal.org.objectweb.asm.commons.TryCatchBlockSorter;
  */
 public interface ComportamientoMensaje {
     
-  List<Mensaje>    leerTodosLosMensajes();
+  ArrayList<Mensaje>  leerTodosLosMensajes();
   public void guardar(Mensaje m);
 }
   //ArrayList<Mensaje>  leerTodosLosMensajes();

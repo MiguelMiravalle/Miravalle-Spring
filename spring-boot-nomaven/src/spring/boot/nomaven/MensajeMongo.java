@@ -13,37 +13,11 @@ import org.springframework.stereotype.Repository;
  *
  * @author T-101
  */
-@Repository
-public class MensajeMongo extends Mensaje{
-   
-   
-@Id
-private String idd;
 
-    /**
-     * @return the id
-     */
-    public String getIdd() {
-        return idd;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(String id) {
-        this.idd = id;
-    }
-
-    
-
-   
-
-}
-
-/*public class MensajeMongo extends Mensaje implements ComportamientoMensaje {
+public class MensajeMongo implements ComportamientoMensaje {
 
     @Override
-    public ArrayList<Mensaje> leerTodosLosMensajes() {
+    public ArrayList< Mensaje > leerTodosLosMensajes() {
         Mensaje m1=new Mensaje();
         m1.setTitulo("Primer mensaje serializado");
         m1.setCuerpo("Cuerpo del primer serializado");
@@ -55,10 +29,14 @@ private String idd;
         ArrayList<Mensaje> mensajes=new ArrayList<Mensaje>();
         mensajes.add(m1);
         mensajes.add(m2);
-        return mensajes;
-        
-        
+        return mensajes; 
+    }
+
+    @Override
+    public void guardar(Mensaje m) {
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
     
 }
-*/
+
+
