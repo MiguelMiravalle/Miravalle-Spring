@@ -5,15 +5,17 @@
  */
 package spring.boot.nomaven;
 
-import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.SessionFactory;
 
 /**
+ * Hibernate Utility class with a convenient method to get Session Factory
+ * object.
  *
- * @author Miravalle-Spring
+ * @author T-101
  */
 public class HibernateUtilidades {
-  
+
     private static final SessionFactory sessionFactory;
     
     static {
@@ -30,5 +32,5 @@ public class HibernateUtilidades {
     
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
-    }  
+    }
 }

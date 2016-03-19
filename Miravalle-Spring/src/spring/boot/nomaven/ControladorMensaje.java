@@ -23,13 +23,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/")
 public class ControladorMensaje {
-    @Autowired ComportamientoMensaje miServicioMensaje;
+    @Autowired ComportamientoMensaje comportamientoMensaje;
     
     @CrossOrigin
     @RequestMapping(value="/mensaje", method=RequestMethod.GET, headers = {"Accept=application/json"})
     @ResponseBody String obtenerTodos()throws Exception{
     ObjectMapper maper=new ObjectMapper();
-    List<Mensaje> mensaje=   miServicioMensaje.leerTodosLosMensajes();
+    List<Mensaje> mensaje=   comportamientoMensaje.leerTodosLosMensajes();
     return maper.writeValueAsString(mensaje); 
     }
     
@@ -48,7 +48,7 @@ public class ControladorMensaje {
      m.setTitulo(titulo);
      m.setCuerpo(cuerpo);
      
-     miServicioMensaje.guardar(m);
+     comportamientoMensaje.guardar(m);
      return "Mensaje guardado con exito";
          
      }
