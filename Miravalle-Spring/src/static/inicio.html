@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/angular.js" ></script>
+        <script>
+         //Debe permanecer siempre debajo de angular.js
+         angular.module('modulo',[]).controller('ctrlMensaje',function ($scope,$http){
+         console.log('Primer Controlador en Angular'); // Println de angular 
+         $scope.bienvenido="Bienvenido a Angular";
+         //Aqui empieza la logica de JS con angular 
+         /*scope - comodin para decir por medio de mi tu puedes comunicarte con el cliente, 
+         con http te puedes comunicar con el servidor con spring  */ 
+         }).controller('ctrlCliente',function(){     
+         }); //dos argumentos 1. Nombre del controlador 2. Funcion del controlador 
+         
+         // ng-show="false"
+         </script>
+    </head>
+    <body ng-app="modulo">
+    <div ng-controller="ctrlMensaje">
+    <center><h1>INICIO PROYECTO</h1></center> 
+    <center>{{bienvenido}}</center>
+    <center><input ng-model="bienvenido" type="text"/></center> 
+    <center><button class="btn-primary"> Obtener primer mensaje </button></center>
+    </div>
+    </body>
+</html>
