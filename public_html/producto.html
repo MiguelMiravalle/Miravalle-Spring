@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    
+    <head>
+        
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script src="angular.min.js"></script>
+        <script >
+            angular.module('producto',[]).controller('ctrlProducto', function($scope,$http){
+              $scope.Mensajito='asasasa';  
+             $http.get('/producto').success(function(json){
+                 $scope.Mensajito='Si funciono';  
+              })
+              $scope.guardar = function(){
+                  $http.post('http://localhost:9999/producto/de limpieza/colgate/abarrotes/25').success(function(json){
+                     $scope.guardado=json; 
+                  });
+                  
+              }
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-app="producto">
+        <div ng-controller="ctrlProducto">
+            
+            {{Mensajito}}
+            
+            <button ng-click="guardar()">guardar</button>
+            {{guardado}}
+        </div>
+    </body>
+</html>
