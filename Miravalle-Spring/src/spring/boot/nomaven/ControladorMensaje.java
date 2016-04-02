@@ -49,7 +49,7 @@ public class ControladorMensaje {
      m.setCuerpo(cuerpo);
      
      comportamientoMensaje.guardar(m);
-     return "Mensaje guardado con exito";
+     return "Mensaje Guardado";
          
      }
      
