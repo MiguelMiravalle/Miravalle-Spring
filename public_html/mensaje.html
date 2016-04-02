@@ -10,15 +10,21 @@ and open the template in the editor.
         <script >
             angular.module('mensaje',[]).controller('ctrlMensaje', function($scope,$http){
               $scope.Mensajito='asasasa';  
-             $http.get('/producto').success(function(json){
-                 $scope.Mensajito='Si funciono';  
-              })
+            
               $scope.guardar = function(){
                   $http.post('http://localhost:9999/mensaje/yo/un mendsjito ddesde angular').success(function(json){
                      $scope.guardado=json; 
                   });
                   
               }
+              
+              
+             $scope.actualizar = function(){
+                  $http.put('http://localhost:9999/mensaje/1/nuevo/mensaje 1 actualizado').success(function(json){
+                     $scope.actualizado=json; 
+                  });
+                  
+              } 
             });
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +36,9 @@ and open the template in the editor.
             
             <button ng-click="guardar()">guardar</button>
             {{guardado}}
+            
+            <button ng-click="actualizar()">Actualizar</button>
+            {{actualizado}}
         </div>
     </body>
 </html>
